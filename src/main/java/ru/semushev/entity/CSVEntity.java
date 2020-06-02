@@ -13,7 +13,7 @@ public class CSVEntity {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        map.forEach((k, v) -> builder.append(k).append(" : \n\t").append(v).append("\n"));
+        map.forEach((k, v) -> builder.append(k).append(" : \n\t").append(Normalizer.normalizeString(v)).append("\n"));
         return builder.toString();
     }
 }

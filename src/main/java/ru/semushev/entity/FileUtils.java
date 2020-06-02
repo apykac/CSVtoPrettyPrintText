@@ -15,7 +15,7 @@ public class FileUtils {
         try (BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream(fileName))) {
             StringBuilder builder = new StringBuilder();
             for (CSVEntity csvEntity : csvEntities) {
-                builder.append(csvEntity.toString()).append("*".repeat(25)).append("\n");
+                builder.append(csvEntity.toString()).append("*".repeat(100)).append("\n\n\n\n");
             }
             writer.write(builder.toString().getBytes(StandardCharsets.UTF_8));
         }
